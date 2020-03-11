@@ -38,4 +38,21 @@ public class Deck {
     public Card getTopCard() {
         return cards[topCardIdx];
     }
+    
+    public void next() {
+        if (topCardIdx >= numCards - 1) {
+            topCardIdx = 0;
+        }else {
+            topCardIdx++;
+        }
+        
+    }
+    
+    public void prev() {    
+        if (topCardIdx <= 0) {
+            topCardIdx = numCards - 1;
+        }else {
+            topCardIdx--;
+        }
+    }
 }
